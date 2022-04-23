@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 #include <tbb/parallel_for.h>
 #include <tbb/parallel_scan.h>
 #include <cmath>

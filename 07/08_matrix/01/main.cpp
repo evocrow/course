@@ -109,7 +109,7 @@ void BM_transpose_morton_tiled_streamed(benchmark::State &bm) {
             xBase *= blockSize;
             yBase *= blockSize;
             for (int y = yBase; y < yBase + blockSize; y++) {
-                for (int x = xBase; x < xBase + blockSize; x += 4) {
+                for (int x = xBase; x < xBase + blockSize; x++) {
                     _mm_stream_si32((int *)&b(x, y), (int &)a(y, x));
                 }
             }
@@ -128,7 +128,7 @@ void BM_transpose_morton_tiled_streamed_reversed(benchmark::State &bm) {
             xBase *= blockSize;
             yBase *= blockSize;
             for (int y = yBase; y < yBase + blockSize; y++) {
-                for (int x = xBase; x < xBase + blockSize; x += 4) {
+                for (int x = xBase; x < xBase + blockSize; x++) {
                     _mm_stream_si32((int *)&b(x, y), (int &)a(y, x));
                 }
             }

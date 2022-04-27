@@ -11,7 +11,7 @@ find_package(OpenMP REQUIRED)
 target_link_libraries(main PUBLIC OpenMP::OpenMP_CXX)
 
 find_package(TBB REQUIRED)
-target_link_libraries(main PUBLIC TBB::tbb TBB::tbbmalloc)
+target_link_libraries(main PUBLIC TBB::tbb TBB::malloc)
 
 #find_package(benchmark REQUIRED)
 #target_link_libraries(main PUBLIC benchmark::benchmark)

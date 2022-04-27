@@ -171,7 +171,7 @@ void BM_y_blur_tiled_only_x_prefetched_streamed_merged(benchmark::State &bm) {
                         }
                     }
                     for (int offset = 0; offset < 16; offset++) {
-                        _mm_stream_si32((int *)&b(x + offset, y), (int &)res);
+                        _mm_stream_si32((int *)&b(x + offset, y), (int &)res[offset]);
                     }
                 }
             }
